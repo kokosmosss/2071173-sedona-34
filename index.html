@@ -8,7 +8,9 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+<!-- ХЕДЕР -->
     <header class="page-header">
+<!-- ОСНОВНОЕ МЕНЮ-НАВИГАЦИЯ -->
       <nav class="page-navigation">
       <a class="main-header-logo" title="Логотип сайта городка Седона" href="#">
         <img src="img/logo.svg" width="" height="" alt="Логотип сайта городка Седона">
@@ -24,7 +26,7 @@
           <a class="navigation-link" href="catalog.html"> Гостиницы</a>
         </li>
       </ul>
-
+<!-- ПОЛЬЗОВАТЕЛЬСКОЕ МЕНЮ -->
       <ul class="navigavion-list navigavion-user">
         <li class="navigation-item">
           <a class="navigation-link" href="#">
@@ -42,22 +44,22 @@
         </ul>
       </nav>
     </header>
-
+<!-- ОСНОВНАЯ ЧАСТЬ -->
     <main class="main-index">
-
+      <div class="image-container"></div>
       <h1 class="visually-hidden">Седона</h1>
       <p class="main-description"> <b>Седона — небольшой городок в Аризоне, заслуживающий большего!</b> </p>
       <p class="main-subdescription">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-
+<!-- СПИСОК ПРЕИМУЩЕСТВ -->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
-        <ol class="advantages-list"> <!-- Думаю, тут все же ol семантически, т.к. порядок важен, но не уверена -->
+        <ol class="advantages-list">
           <li class="advantages-item">
             <h3 class="advantages-title"> Настоящий городок </h3>
             <span class="advantages-decoration-number"> — №1 — </span>
             <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             <img src="url(photo-1.jpg)" alt="Уютная Седона">
-            <ul class="advantages-list-inner"> <!-- Пока назвала классы так, как объясняли в уроках, но стилизация одинаковая с главным стиском, поэтому сомневаюсь в необходимости отдельных классов -->
+            <ul class="advantages-list-inner"> <!-- Пока назвала классы так, как объясняли в уроках, но стилизация одинаковая с главным списком, поэтому сомневаюсь в необходимости отдельных классов -->
               <li class="advantages-inner-item">
                 <h4 class="advantages-inner-title">ЖИЛЬЁ</h4>
                   <p class="advantages-inner-description">Рекомендуем пожитьв настоящем мотеле,
@@ -102,7 +104,7 @@
           </li>
         </ol>
       </section>
-
+<!-- ФОРМА ПОИСКА -->
       <section class="hotel-search-label">
         <h2 class="visually-hidden"> Поиск гостиницы </h2>
         <p class="hotel-search-question"><b>ЗАИНТЕРЕСОВАЛИСЬ?</b></p>
@@ -111,7 +113,7 @@
         <a class="button button-hotel-search" href="#"> ПОИСК ГОСТИНИЦЫ В СЕДОНЕ </a>
       </section>
     </main>
-
+<!-- СЕКЦИЯ ПОДПИСКИ НА РАССЫЛКУ -->
     <aside class="email-subscribe">
       <h2 class="visually-hidden"> Форма для подписки на рассылку </h2>
       <p class="email-subscribe-title"><b>ПОДПИШИТЕСЬ НА РАССЫЛКУ</b></p>
@@ -122,7 +124,7 @@
         <button class="button email-subscribe-button" type="submit">ПОДПИСАТЬСЯ</button>
       </form>
     </aside>
-
+<!-- ФУТЕР -->
     <footer class="page-fotter">
       <section class="social-networks">
         <h3 class="visually-hidden"> Ссылки на социальные сети разработчика сайта</h3>
