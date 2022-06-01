@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
@@ -24,6 +24,7 @@ body {
 
 /*КНОПКИ*/
 .button {
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -34,32 +35,38 @@ body {
   text-transform: uppercase;
 }
 
-.button-more {
+.brown-button {
   background-color: #756157;
 }
 
-.button-delete {
+.green-button {
+  background-color: #7DB54F;
+}
+
+.transparent-button {
   font-weight: 400;
   background-color: transparent;
   text-transform: capitalize;
 }
 
-.button-favorite-added {
-  background-color: #7DB54F;
-}
-
-.navigation-button {
-  background-color: #756157;
-  text-decoration: none;
-  text-align: center;
-}
-
-.button-hotel-search {
+.hotel-search-button {
   font-size: 20px;
   line-height: 36px;
-  font-weight: 700;
-  background-color: #756157;
-  text-transform: uppercase;
+}
+
+.subscribe-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-current-button {
+  color: #000000;
+  background-color: #f2f2f2;
 }
 
 /*ГЛАВНАЯ. ОСНОВНОЕ МЕНЮ-НАВИГАЦИЯ*/
@@ -67,7 +74,6 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  text-decoration: none;
 }
 
 .navigation-link {
@@ -79,7 +85,7 @@ body {
   text-align: center;
 }
 
-.index-image-container {
+.smooth-img-container {
   color: #ffffff;
   background-color: #000000;
   background-image: url("../images/background-top.jpg");
@@ -128,9 +134,8 @@ body {
 }
 
 .advantages-description-dark {
-  color:#333333;
+  color: #333333;
 }
-
 /*ФОРМА ПОИСКА*/
 .hotel-search-question {
   font-size: 30px;
@@ -145,21 +150,23 @@ body {
   color: #333333;
 }
 /*СЕКЦИЯ ПОДПИСКИ НА РАССЫЛКУ*/
-.email-subscribe-main {
-  background-image: url("../images/background-smooth.jpg");
-  background-position: 100% auto;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  background-color: #000000;
+.email-subscribe {
   text-align: center;
 }
 
+.smooth-background {
+  background-image: url("../images/background-smooth.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  background-color: #000000;
+}
+
 .subscribe-title {
-font-size: 30px;
-line-height: 36px;
-font-weight: 700;
-text-transform: uppercase;
-text-align: left;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .subscribe-description {
@@ -167,26 +174,15 @@ text-align: left;
   line-height: 26px;
 }
 
-.subscribe-button {
-  font-family: "PT Sans";
-  font-size: 20px;
-  line-height: 36px;
-}
-
-.subscribe-form input {
+.text-input {
   background-color: #f2f2f2;
 }
 
-.email-subscribe-catalog {
-  color: #000000;
-  background-color: #ffffff;
-  text-align: center;
-}
 /*ФУТЕР*/
 .contacts-phone-link {
   font-size: 40px;
   line-height: 40px;
-  color:#000000;
+  color: #000000;
   text-decoration: none;
 }
 /*КАТАЛОГ. ОСНОВНАЯ ЧАСТЬ. ХЕДЕР-ДЛЯ ПОИСКА ГОСТИНИЦЫ*/
@@ -218,7 +214,6 @@ text-align: left;
   line-height: 26px;
   font-weight: 700;
 }
-
 /*РЕЗУЛЬТАТЫ ПОИСКА*/
 .hotel-search-result {
   font-size: 30px;
@@ -228,17 +223,17 @@ text-align: left;
 }
 /*ОТОБРАЖЕНИЕ НА СТРАНИЦЕ*/
 .select-control {
-  font-family: "PT Sans";
+  font-family: inherit;
   font-size: 18px;
   line-height: 21px;
-  color:#333333;
+  color: #333333;
 }
 /*КАРТОЧКИ ГОСТИНИЦ*/
 .hotel-card-link {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
-  color:#000000;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -256,22 +251,4 @@ text-align: left;
   color: #333333;
   background-color: #f2f2f2;
   text-transform: uppercase;
-}
-/*ПАГИНАЦИЯ*/
-.pagination-link {
-  color:#ffffff;
-  background-color: #82B3D3;
-  text-decoration: none;
-}
-
-.pagination-current {
-  color:#000000;
-  background-color: #f2f2f2;
-}
-
-.hotel-on-page {
-  font-family: "PT Sans";
-  font-size: 18px;
-  line-height: 21px;
-  color:#333333;
 }
