@@ -253,13 +253,36 @@ body {
 }
 
 /*ФУТЕР*/
+.page-footer {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-phone {
+  width: 331px;
+}
+
+.social-networks {
+  width: 170px;
+}
+
 .contacts-phone-link {
   font-size: 40px;
   line-height: 40px;
   color: #000000;
   text-decoration: none;
 }
+
+.htmlacademy-logo-link {
+  width: 115px;
+}
 /*КАТАЛОГ. ОСНОВНАЯ ЧАСТЬ. ХЕДЕР-ДЛЯ ПОИСКА ГОСТИНИЦЫ*/
+.catalog-header-wrapper {
+  width: 1060px;
+  margin: 0 auto;
+}
 .catalog-header {
   color: #ffffff;
   background-color: #000000;
@@ -272,12 +295,37 @@ body {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+  margin: 0;
 }
 /*ХЛЕБНЫЕ КРОШКИ*/
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
 .breadcrumbs-item {
   font-size: 16px;
 }
 /*ФОРМА ПОИСКА ГОСТИНИЦЫ*/
+.hotel-search-filter {
+  display: flex;
+}
+
+.hotel-filter-group {
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.hotel-filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .hotel-filter-title {
   font-size: 20px;
   line-height: 26px;
