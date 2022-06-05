@@ -313,8 +313,19 @@ body {
   display: flex;
 }
 
+.hotel-search-wrapper {
+  display: flex;
+  width: 365px;
+  justify-content: space-between;
+}
+
+.search-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
 .hotel-filter-group {
-  width: 150px;
+  /* width: 150px; */
   margin: 0;
   padding: 0;
   border: 0;
@@ -331,6 +342,7 @@ body {
   line-height: 26px;
   font-weight: 700;
 }
+
 .catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
