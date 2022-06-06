@@ -87,7 +87,6 @@
                       </li>
                     </ul>
                   </fieldset>
-
                   <fieldset class="hotel-filter-group">
                     <legend class="catalog-filter-title">Тип Жилья</legend>
                     <ul class="hotel-filter-list">
@@ -123,23 +122,33 @@
         </header>
   <!-- РЕЗУЛЬТАТЫ ПОИСКА -->
         <section class="hotel-search-results">
-          <h2 class="visually-hidden">Результаты поиска</h2>
-          <p class="hotel-search-result">Найдено гостиниц:38</p>
-  <!-- ОТОБРАЖЕНИЕ НА СТРАНИЦЕ -->
-          <select class="select-control select-category-sort" aria-label="Сортировка">
-            <option value="popular">Сначала популярные</option>
-            <option value="cheap" selected>Сначала дешёвые</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
-          <a class="button-view button-view-selected" href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a class="button-view" href="#">
-            <span class="visually-hidden">Показать список</span>
-          </a>
-          <a class="button-view" href="#">
-            <span class="visually-hidden">Слайдшоу</span>
-          </a>
+          <div class="search-results-wrapper">
+            <h2 class="visually-hidden" hidden>Результаты поиска</h2>
+            <p class="hotel-search-result">Найдено гостиниц:38</p>
+    <!-- ОТОБРАЖЕНИЕ НА СТРАНИЦЕ -->
+            <select class="select-control select-category-sort" aria-label="Сортировка">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap" selected>Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+            <ul class="view-buttons">
+              <li>
+                <a class="button-view-cards button-view-selected" href="#">
+                  <span class="visually-hidden">Показать карточки</span>
+                </a>
+              </li>
+              <li>
+                <a class="button-view-list" href="#">
+                  <span class="visually-hidden">Показать список</span>
+                </a>
+              </li>
+              <li>
+                <a class="button-view-slideshow" href="#">
+                  <span class="visually-hidden">Слайдшоу</span>
+                </a>
+              </li>
+            </ul>
+          </div>
   <!-- КАРТОЧКИ ГОСТИНИЦ -->
           <ul class="hotel-list">
             <li class="hotel-card">
@@ -192,38 +201,42 @@
             </li>
           </ul>
   <!-- ПАГИНАЦИЯ -->
-          <ul class="pagination">
-            <li class="pagination-item">
-              <a class="button pagination-button pagination-current-button">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-button" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-button" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-button" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-button" href="#">...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-button" href="#">10</a>
-            </li>
-          </ul>
-          <label>
-            Гостиниц на странице:
-            <select class="select-control select-hotel-on-page" name="hotel-on-page">
-              <option value="4" selected>4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-          </label>
+          <div class="pagination-wrapper">
+            <ul class="pagination">
+              <li class="pagination-item">
+                <a class="button pagination-button pagination-current-button">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-button" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-button" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-button" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-button" href="#">...</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-button" href="#">10</a>
+              </li>
+            </ul>
+            <div class="select-wrapper">
+              <label>
+                Гостиниц на странице:
+                <select class="select-control select-hotel-on-page" name="hotel-on-page">
+                  <option value="4" selected>4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+            </div>
+          </div>
         </section>
       </main>
   <!-- СЕКЦИЯ ПОДПИСКИ НА РАССЫЛКУ -->
@@ -239,7 +252,7 @@
   <!-- ФУТЕР -->
       <footer class="page-footer">
         <section class="social-networks">
-          <h3 class="visually-hidden">Ссылки на социальные сети разработчика сайта</h3>
+          <h3 class="visually-hidden" hidden>Ссылки на социальные сети разработчика сайта</h3>
           <ul class="social-networks-list">
             <li class="social-networks-vk">
               <a class="button-vk" href="https://vk.com/htmlacademy">
@@ -259,7 +272,7 @@
           </ul>
         </section>
         <section class="contacts-phone">
-          <h3 class="visually-hidden">Контактный телефон</h3>
+          <h3 class="visually-hidden" hidden>Контактный телефон</h3>
           <a class="contacts-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </section>
         <a class="htmlacademy-logo-link" href="https://htmlacademy.ru/">
