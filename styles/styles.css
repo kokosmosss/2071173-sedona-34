@@ -37,6 +37,17 @@ body {
   padding: 0;
   list-style: none;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /*КНОПКИ*/
 .button {
   font-family: inherit;
@@ -94,34 +105,47 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 70px;
+}
+
+.navigavion-list {
+  width: 500px;
+  display: flex;
+  align-items: center;
 }
 
 .navigation-link {
   text-decoration: none;
   color: #000000;
+  display: block;
+  padding: 20px 17px;
+}
+
+.navigavion-user {
+  max-width: 310px;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.navigavion-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
+  padding: 23px 12px;
+}
+.main-header-logo {
+  display: block;
+  margin-right: 30px;
 }
 /*ОСНОВНАЯ ЧАСТЬ*/
 .main-index {
   text-align: center;
 }
 
-.page-navigation {
-  display: flex;
-  padding: 0 70px;
-}
-
-.navigavion-list {
-  width: 500px;
-}
-
-.navigavion-user {
-  max-width: 310px;
-  margin-left: auto;
-}
-
-.main-header-logo {
+.welcome-text {
+  padding: 51px 371px 82px;
   display: block;
-  margin-right: 30px;
 }
 
 .smooth-img-container {
@@ -130,6 +154,7 @@ body {
   background-image: url("../images/background-top.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  margin-bottom: 63px;
 }
 
 .main-description {
@@ -137,12 +162,14 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0 290px 31px;
 }
 
 .main-subdescription {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin: 0 270px 90px;
 }
 /*СПИСОК ПРЕИМУЩЕСТВ*/
 .advantages-list {
@@ -159,18 +186,26 @@ body {
   display: flex;
 }
 
+.advantages-item {
+  min-height: 384px;
+}
+
 .advantages-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .advantages-item-blue {
   background-color: #82B3D3;
   color: #FFFFFF;
   width: 400px;
+  padding: 92px 85px;
+  box-sizing: border-box;
 }
 
 .advantages-item-reverse {
@@ -181,39 +216,68 @@ body {
   background-color: #F0F6FA;
   color: #000000;
   width: 400px;
+  padding: 103px 85px 102px;
+  box-sizing: border-box;
+}
+
+.advantages-sublist .advantages-item-lightblue {
+  padding: 80px 85px 81px;
 }
 
 .advantages-item-darktblue {
   background-color: #E6F0F6;
   color: #000000;
   width: 400px;
+  padding: 103px 85px 102px;
+  box-sizing: border-box;
 }
 
 .advantages-item-white {
   background-color: #FFFFFF;
   color: #000000;
   width: 400px;
+  padding: 80px 85px 81px;
+  box-sizing: border-box;
+}
+
+.advantages-description {
+  margin: 0;
 }
 
 .advantages-description-dark {
   color: #333333;
 }
+
+.advantages-decoration-number {
+  display: block;
+  margin-bottom: 30px;
+}
 /*ФОРМА ПОИСКА*/
+.hotel-search {
+  padding: 91px 304px 93px;
+}
+
 .hotel-search-question {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 29px;
+
 }
 
 .hotel-search-description {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin: 0;
+  margin-bottom: 56px;
 }
 /*СЕКЦИЯ ПОДПИСКИ НА РАССЫЛКУ*/
 .email-subscribe {
   text-align: center;
+  padding: 94px 0;
 }
 
 .smooth-background {
@@ -229,11 +293,14 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 29px;
 }
 
 .subscribe-description {
   font-size: 22px;
   line-height: 26px;
+  margin: 0 362px 46px;
 }
 
 .text-input {
@@ -242,7 +309,7 @@ body {
 
 /*ФУТЕР*/
 .page-footer {
-  padding: 40px 70px 30px;
+  padding: 45px 70px 35px;
   display: flex;
   justify-content: space-between;
   margin-top: auto;
