@@ -53,7 +53,7 @@
     <!-- ХЛЕБНЫЕ КРОШКИ -->
             <ol class="breadcrumbs clear-list">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">Главная</a>
+                <a class="breadcrumbs-link visually-hidden" href="index.html">Главная</a>
               </li>
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link">Гостиницы</a>
@@ -123,7 +123,7 @@
   <!-- РЕЗУЛЬТАТЫ ПОИСКА -->
         <section class="hotel-search-results">
           <div class="search-results-wrapper">
-            <h2 class="visually-hidden" hidden>Результаты поиска</h2>
+            <h2 class="visually-hidden">Результаты поиска</h2>
             <p class="hotel-search-result">Найдено гостиниц:38</p>
     <!-- ОТОБРАЖЕНИЕ НА СТРАНИЦЕ -->
             <select class="select-control select-category-sort" aria-label="Сортировка">
@@ -131,23 +131,17 @@
               <option value="cheap" selected>Сначала дешёвые</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-            <ul class="view-buttons clear-list">
-              <li>
-                <a class="button-view-cards button-view-selected" href="#">
-                  <span class="visually-hidden">Показать карточки</span>
-                </a>
-              </li>
-              <li>
-                <a class="button-view-list" href="#">
-                  <span class="visually-hidden">Показать список</span>
-                </a>
-              </li>
-              <li>
-                <a class="button-view-slideshow" href="#">
-                  <span class="visually-hidden">Слайдшоу</span>
-                </a>
-              </li>
-            </ul>
+            <div class="view-buttons">
+              <a class="button-view button-view-cards button-view-selected" href="#">
+                <span class="visually-hidden">Показать карточки</span>
+              </a>
+              <a class="button-view button-view-list" href="#">
+                <span class="visually-hidden">Показать список</span>
+              </a>
+              <a class="button-view button-view-slideshow" href="#">
+                <span class="visually-hidden">Слайдшоу</span>
+              </a>
+            </div>
           </div>
   <!-- КАРТОЧКИ ГОСТИНИЦ -->
           <ul class="hotel-list clear-list">
@@ -252,20 +246,20 @@
   <!-- ФУТЕР -->
       <footer class="page-footer">
         <section class="social-networks">
-          <h3 class="visually-hidden" hidden>Ссылки на социальные сети разработчика сайта</h3>
+          <h3 class="visually-hidden">Ссылки на социальные сети разработчика сайта</h3>
           <ul class="social-networks-list clear-list">
             <li class="social-networks-vk">
-              <a class="button-vk" href="https://vk.com/htmlacademy">
+              <a class="button-social button-vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">ВКонтакте</span>
               </a>
             </li>
             <li class="social-networks-telegram">
-              <a class="button-telegram" href="https://t.me/htmlacademy">
+              <a class="button-social button-telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
             <li class="social-networks-youtube">
-              <a class="button-youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="button-social button-youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
