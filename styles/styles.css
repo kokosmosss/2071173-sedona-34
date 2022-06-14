@@ -383,6 +383,8 @@ body {
 .breadcrumbs-link {
   display: block;
   padding: 10px;
+  min-width: 12px;
+  min-height: 12px;
 }
 
 /*ФОРМА ПОИСКА ГОСТИНИЦЫ*/
@@ -464,6 +466,7 @@ body {
 .hotel-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 96px;
 }
 
 .hotel-card {
