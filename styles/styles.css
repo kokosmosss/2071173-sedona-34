@@ -60,7 +60,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   display: block;
-  width: 160px;
+  /* width: 160px; */
   height: 37px;
 }
 
@@ -468,19 +468,22 @@ body {
 }
 /*КАРТОЧКИ ГОСТИНИЦ*/
 .hotel-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
   margin-bottom: 96px;
 }
 
 .hotel-card {
   width: 300px;
-  margin-right: 18px;
   padding: 20px;
 }
 
-.hotel-card:nth-child(3n) {
-  margin-right: 0;
+.hotel-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  column-gap: 20px;
+  row-gap: 16px;
 }
 
 .hotel-card-link {
@@ -489,6 +492,13 @@ body {
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+.hotel-card-image {
+  display: block;
+}
+
+.hotel-card-title {
+  margin: 16px 0;
 }
 
 .hotel-card-type {
@@ -505,6 +515,8 @@ body {
   color: #333333;
   background-color: #f2f2f2;
   text-transform: uppercase;
+  display: block;
+  padding: 8px 22px;
 }
 /*ПАГИНАЦИЯ*/
 .pagination-wrapper {
