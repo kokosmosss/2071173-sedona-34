@@ -48,6 +48,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 /*КНОПКИ*/
 .button {
   font-family: inherit;
@@ -60,7 +61,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   display: block;
-  /* width: 160px; */
   height: 37px;
 }
 
@@ -149,6 +149,7 @@ body {
   z-index: 1;
   margin-bottom: -5px;
 }
+
 /*ОСНОВНАЯ ЧАСТЬ*/
 .main-index {
   text-align: center;
@@ -182,6 +183,7 @@ body {
   color: #333333;
   margin: 0 270px 90px;
 }
+
 /*СПИСОК ПРЕИМУЩЕСТВ*/
 .advantages-list {
   display: flex;
@@ -264,6 +266,7 @@ body {
   display: block;
   margin-bottom: 30px;
 }
+
 /*ФОРМА ПОИСКА*/
 .hotel-search {
   padding: 91px 304px 93px;
@@ -285,6 +288,7 @@ body {
   margin-top: 0;
   margin-bottom: 56px;
 }
+
 /*СЕКЦИЯ ПОДПИСКИ НА РАССЫЛКУ*/
 .email-subscribe {
   text-align: center;
@@ -352,6 +356,7 @@ body {
   max-width: 24px;
   padding: 14px;
 }
+
 /*КАТАЛОГ. ОСНОВНАЯ ЧАСТЬ. ХЕДЕР-ДЛЯ ПОИСКА ГОСТИНИЦЫ*/
 .catalog-header-wrapper {
   width: 1060px;
@@ -373,6 +378,7 @@ body {
   font-weight: 700;
   margin: 0;
 }
+
 /*ХЛЕБНЫЕ КРОШКИ*/
 .breadcrumbs {
   display: flex;
@@ -423,6 +429,7 @@ body {
   line-height: 26px;
   font-weight: 700;
 }
+
 /*РЕЗУЛЬТАТЫ ПОИСКА*/
 .hotel-search-results {
   padding: 62px 72px 25px;
@@ -458,6 +465,7 @@ body {
 .button-view:nth-child(3n) {
   margin-right: 0;
 }
+
 /*ОТОБРАЖЕНИЕ НА СТРАНИЦЕ*/
 .select-control {
   font-family: inherit;
@@ -466,6 +474,7 @@ body {
   color: #333333;
   width: 290px;
 }
+
 /*КАРТОЧКИ ГОСТИНИЦ*/
 .hotel-list {
   display: grid;
@@ -493,6 +502,7 @@ body {
   color: #000000;
   text-decoration: none;
 }
+
 .hotel-card-image {
   display: block;
   object-fit: contain;
@@ -519,6 +529,7 @@ body {
   display: block;
   padding: 8px 22px;
 }
+
 /*ПАГИНАЦИЯ*/
 .pagination-wrapper {
   display: flex;
