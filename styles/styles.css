@@ -65,6 +65,7 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   padding: 8px 15px;
+  border: none;
 }
 
 .button:disabled {
@@ -81,6 +82,7 @@ body {
 
 .button:active {
   background-color: #82B3D3;
+  color: #A7CAE0;
 }
 
 .brown-button {
@@ -97,6 +99,7 @@ body {
 
 .brown-button:active {
   background-color: #756157;
+  color: #9E9089;
 }
 
 .green-button {
@@ -113,11 +116,11 @@ body {
 
 .green-button:active {
   background-color: #7DB54F;
+  color: #A4CB84;
 }
 
 .navigation-button {
   width: 160px;
-  /* padding: 8px 15px; */
   margin-left: 20px;
 }
 
@@ -132,6 +135,8 @@ body {
   line-height: 36px;
   margin: 0 auto;
   width: 574px;
+  height: 60px;
+  padding: 12px 15px;
 }
 
 .subscribe-button {
@@ -144,12 +149,33 @@ body {
   line-height: 36px;
   width: 60px;
   height: 60px;
+  border: 1px solid #82B3D3;
 }
 
 .pagination-current-button {
   color: #000000;
   background-color: #f2f2f2;
+  border: none;
 }
+/* не придумала как записать это короче, на этой кнопке общий класс .button, который дает другие ховеры, форусы и тд. А эта кнопка не должна меняться, она фактически не активна. Можно ли как то короче записать? */
+.pagination-current-button:hover {
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.pagination-current-button:focus {
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.pagination-current-button:active {
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+}
+
 
 /*ГЛАВНАЯ. ОСНОВНОЕ МЕНЮ-НАВИГАЦИЯ*/
 .page-navigation {
@@ -193,6 +219,7 @@ body {
 .navigation-link-current {
   text-decoration-line: underline;
   text-underline-offset: 23px;
+  text-decoration-thickness: 2px;
   text-decoration-color: #756257;
 }
 
@@ -452,8 +479,36 @@ body {
   text-decoration: none;
 }
 
+.contacts-phone-link:hover {
+  color: #756157;
+}
+
+.contacts-phone-link:focus {
+  color: #756157;
+}
+
+.contacts-phone-link:active {
+  color: #D6D0CD;
+}
+
 .htmlacademy-logo-link {
   width: 115px;
+}
+
+.htmlacademy-logo-icon {
+  fill: #000000;
+}
+
+.htmlacademy-logo-link:hover .htmlacademy-logo-icon {
+  fill: #756157;
+}
+
+.htmlacademy-logo-link:focus .htmlacademy-logo-icon {
+  fill: #756157;
+}
+
+.htmlacademy-logo-link:active .htmlacademy-logo-icon {
+  fill: #D6D0CD;
 }
 
 .button-social {
@@ -461,6 +516,22 @@ body {
   max-height: 18px;
   max-width: 24px;
   padding: 14px;
+}
+
+.social-icon {
+  fill: #83B3D3;
+}
+
+.button-social:hover .social-icon {
+  fill: #68A2CA;
+}
+
+.button-social:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.button-social:active .social-icon {
+  fill: #D2E3EF;
 }
 
 /*КАТАЛОГ. ОСНОВНАЯ ЧАСТЬ. ХЕДЕР-ДЛЯ ПОИСКА ГОСТИНИЦЫ*/
@@ -493,6 +564,23 @@ body {
 .breadcrumbs-item {
   font-size: 16px;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  top: 17px;
+  right: -3px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
 }
 
 .breadcrumbs-link {
@@ -500,6 +588,10 @@ body {
   padding: 10px;
   min-width: 12px;
   min-height: 12px;
+}
+
+.breadcrumbs-home-icon {
+  fill: #FFFFFF;
 }
 
 /*ФОРМА ПОИСКА ГОСТИНИЦЫ*/
