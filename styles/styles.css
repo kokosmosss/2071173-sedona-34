@@ -128,6 +128,29 @@ body {
   font-weight: 400;
   background-color: transparent;
   text-transform: capitalize;
+  padding: 8px 28px;
+  margin: 0;
+}
+
+.transparent-button:hover {
+  color: #B2B3B4;
+  background-color: transparent;
+}
+
+.transparent-button:focus {
+  background-color: transparent;
+  outline: 3px solid #83B3D3;
+}
+
+/* после нажатия на кнопку остается рамка, не понимаю как убрать. */
+.transparent-button:active {
+  color: #727676;
+  outline: none;
+}
+
+.transparent-button:visited {
+  color: #727676;
+  outline: none;
 }
 
 .hotel-search-button {
@@ -217,10 +240,11 @@ body {
 }
 
 .navigation-link-current {
-  text-decoration-line: underline;
+  border-bottom: 2px solid #756257;
+  /* text-decoration-line: underline;
   text-underline-offset: 23px;
   text-decoration-thickness: 2px;
-  text-decoration-color: #756257;
+  text-decoration-color: #756257; */
 }
 
 .navigation-link-search {
@@ -638,11 +662,25 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 191px 60px 0;
+  margin: 0;
+  max-width: 500px;
+  flex-grow: 1;
 }
 
 .search-results-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+/*ОТОБРАЖЕНИЕ НА СТРАНИЦЕ*/
+.select-control {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  width: 290px;
+  height: 49px;
 }
 
 .view-buttons {
@@ -656,21 +694,43 @@ body {
   width: 48px;
   height: 48px;
   display: block;
+  padding: 16px;
   margin-right: 8px;
   margin-bottom: 8px;
+  box-sizing: border-box;
+  outline: 2px solid #E5E5E5;
+  border-radius: 4px;
+  background-size: 16px 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* тоже проблема с рамкой после нажатия, остается синяя как при фокусе */
+.button-view:hover {
+  outline: 2px solid #000000;
+}
+
+.button-view:focus {
+  outline: 2px solid #68A2CA;
+}
+
+.button-view:active {
+  outline: 2px solid #000000;
+}
+
+.button-view-cards {
+  background-image: url("../images/icons/menu-cards.svg");
+}
+
+.button-view-slideshow {
+  background-image: url("../images/icons/menu-slideshow.svg");
+}
+
+.button-view-list {
+  background-image: url("../images/icons/menu-list.svg");
 }
 
 .button-view:nth-child(3n) {
   margin-right: 0;
-}
-
-/*ОТОБРАЖЕНИЕ НА СТРАНИЦЕ*/
-.select-control {
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 21px;
-  color: #333333;
-  width: 290px;
 }
 
 /*КАРТОЧКИ ГОСТИНИЦ*/
@@ -726,6 +786,23 @@ body {
   text-transform: uppercase;
   display: block;
   padding: 8px 22px;
+  border-radius: 4px;
+}
+
+.hotel-card-4stars {
+  background-image: url("../images/icons/stars.svg");
+}
+
+.hotel-card-3stars {
+  background-image: url("../images/icons/stars.svg");
+  background-repeat: no-repeat;
+  background-position: -24px;
+}
+
+.hotel-card-2stars {
+  background-image: url("../images/icons/stars.svg");
+  background-repeat: no-repeat;
+  background-position: -48px;
 }
 
 /*ПАГИНАЦИЯ*/
