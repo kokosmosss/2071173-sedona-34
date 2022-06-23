@@ -61,7 +61,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   display: block;
-  height: 37px;
+  min-height: 37px;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 8px 15px;
@@ -237,14 +237,20 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px 18px;
+  position: relative;
+}
+
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 2px solid #756257;
+  top: 45px;
+  z-index: 2;
 }
 
 .navigation-link-current {
-  border-bottom: 2px solid #756257;
-  /* text-decoration-line: underline;
-  text-underline-offset: 23px;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #756257; */
+  position: relative;
 }
 
 .navigation-link-search {
@@ -253,6 +259,17 @@ body {
 
 .navigation-link-favorite {
   background-image: url('../images/icons/heart.svg');
+}
+
+.favorite-counter {
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 13px;
+  right: -1px;
+  background-image: url('../images/icons/favorite-counter.svg');
+  background-size: 20px 20px;
 }
 
 .main-header-logo {
@@ -284,6 +301,19 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   margin-bottom: 63px;
+  position: relative;
+}
+
+.smooth-img-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1200px;
+  height: 57px;
+  background-image: url("../images/background-top-decoration.svg");
+  background-size: 1200px 57px;
 }
 
 .main-description {
@@ -393,6 +423,7 @@ body {
 .advantages-sublist .advantages-item-lightblue {
   padding: 80px 85px 81px;
 }
+
 .advantages-sublist .advantages-title {
   padding-top: 102px;
 }
@@ -454,7 +485,7 @@ body {
 
 .smooth-background {
   background-image: url("../images/background-smooth.jpg");
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   color: #ffffff;
   background-color: #000000;
@@ -739,6 +770,15 @@ body {
   grid-template-columns: repeat(3, 340px);
   column-gap: 18px;
   margin-bottom: 96px;
+  position: relative;
+}
+
+.hotel-list::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #E6E6E6;
+  bottom: -68px;
 }
 
 .hotel-card {
