@@ -133,8 +133,9 @@ body {
   font-weight: 400;
   background-color: transparent;
   text-transform: capitalize;
-  min-width: 160px;
-  margin: 0;
+  width: 100px;
+  height: 32px;
+  margin: 0 auto;
 }
 
 .transparent-button:hover {
@@ -144,18 +145,13 @@ body {
 
 .transparent-button:focus {
   background-color: transparent;
-  outline: 3px solid #83B3D3;
+  border: 3px solid #83B3D3;
 }
 
-/* после нажатия на кнопку остается рамка, не понимаю как убрать. */
 .transparent-button:active {
   color: #727676;
-  outline: none;
-}
-
-.transparent-button:visited {
-  color: #727676;
-  outline: none;
+  background-color: transparent;
+  border: none;
 }
 
 .hotel-search-button {
@@ -179,32 +175,19 @@ body {
   width: 60px;
   height: 60px;
   border: 1px solid #82B3D3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.pagination-current-button {
-  color: #000000;
-  background-color: #f2f2f2;
-  border: none;
-}
-/* не придумала как записать это короче, на этой кнопке общий класс .button, который дает другие ховеры, форусы и тд. А эта кнопка не должна меняться, она фактически не активна. Можно ли как то короче записать? */
-.pagination-current-button:hover {
-  color: #000000;
-  background-color: #f2f2f2;
-  border: none;
-}
-
-.pagination-current-button:focus {
-  color: #000000;
-  background-color: #f2f2f2;
-  border: none;
-}
-
+.pagination-current-button,
+.pagination-current-button:hover,
+.pagination-current-button:focus,
 .pagination-current-button:active {
   color: #000000;
   background-color: #f2f2f2;
   border: none;
 }
-
 
 /*ГЛАВНАЯ. ОСНОВНОЕ МЕНЮ-НАВИГАЦИЯ*/
 .page-navigation {
@@ -268,8 +251,8 @@ body {
 }
 
 .favorite-counter {
-  min-width: 20px;
-  min-height: 20px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   background-repeat: no-repeat;
   top: 13px;
@@ -319,7 +302,7 @@ body {
   width: 1200px;
   height: 57px;
   background-image: url("../images/background-top-decoration.svg");
-  background-size: 1200px 57px;
+  background-size: 100% 100%;
 }
 
 .main-description {
@@ -348,43 +331,32 @@ body {
   position: relative;
 }
 
-.advantages-item-house::before {
+.advantages-item-icon::before {
   content: "";
   left: 0;
   right: 0;
-  width: 75px;
-  height: 72px;
   margin: 0 auto;
   position: absolute;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.advantages-item-house::before {
+  width: 75px;
+  height: 72px;
   background-image: url("../images/icons/house.svg");
-  background-size: 75px 72px;
 }
 
 .advantages-item-food::before {
-  content: "";
-  left: 0;
-  right: 0;
-  width: 75px;
-  height: 72px;
-  margin: 0 auto;
-  position: absolute;
-  background-repeat: no-repeat;
+  width: 74px;
+  height: 70px;
   background-image: url("../images/icons/food.svg");
-  background-size: 75px 72px;
 }
 
 .advantages-item-present::before {
-  content: "";
-  left: 0;
-  right: 0;
-  width: 75px;
-  height: 72px;
-  margin: 0 auto;
-  position: absolute;
-  background-repeat: no-repeat;
+  width: 64px;
+  height: 76px;
   background-image: url("../images/icons/present.svg");
-  background-size: 75px 72px;
 }
 
 .advantages-item-flex {
@@ -633,15 +605,14 @@ body {
   top: 17px;
   right: -3px;
   width: 6px;
-  height: 6px;
-  border-top: 2px solid #FFFFFF;
-  border-right: 2px solid #FFFFFF;
+  height: 8px;
   content: "";
-  transform: rotate(45deg);
+  background-image: url("../images/icons/arrow-white.svg");
+  background-size: 100% 100%;
 }
 
 .breadcrumbs-item:last-child::after {
-  content: none;
+  display: none;
 }
 
 .breadcrumbs-link {
@@ -754,23 +725,23 @@ body {
   margin-right: 8px;
   margin-bottom: 8px;
   box-sizing: border-box;
-  outline: 2px solid #E5E5E5;
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
   background-size: 16px 14px;
   background-position: center;
   background-repeat: no-repeat;
 }
-/* тоже проблема с рамкой после нажатия, остается синяя как при фокусе */
+
 .button-view:hover {
-  outline: 2px solid #000000;
+  border-color: #000000;
 }
 
 .button-view:focus {
-  outline: 2px solid #68A2CA;
+  border-color: #68A2CA;
 }
 
 .button-view:active {
-  outline: 2px solid #000000;
+  border-color: #000000;
 }
 
 .button-view-cards {
@@ -854,19 +825,16 @@ body {
   border-radius: 4px;
 }
 
-.hotel-card-4stars {
+.hotel-card-stars {
   background-image: url("../images/icons/stars.svg");
+  background-repeat: no-repeat;
 }
 
 .hotel-card-3stars {
-  background-image: url("../images/icons/stars.svg");
-  background-repeat: no-repeat;
   background-position: -24px;
 }
 
 .hotel-card-2stars {
-  background-image: url("../images/icons/stars.svg");
-  background-repeat: no-repeat;
   background-position: -48px;
 }
 
