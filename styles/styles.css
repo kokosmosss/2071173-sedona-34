@@ -167,6 +167,8 @@ body {
   font-size: 20px;
   line-height: 36px;
   min-width: 200px;
+  min-height: 60px;
+  border-radius: 0 10px 10px 0;
 }
 
 .pagination-button {
@@ -484,9 +486,53 @@ body {
   margin: 0 362px 46px;
 }
 
-.text-input {
-  background-color: #f2f2f2;
+.subscribe-form {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
 }
+
+.text-input {
+  font: inherit;
+  height: 60px;
+  background-color: #f2f2f2;
+  flex-grow: 1;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  box-sizing: border-box;
+  padding: 22px 20px;
+}
+
+.text-input:hover {
+  background-color: #E6E6E6;
+  border: none;
+}
+
+.text-input:focus {
+  background-color: #E6E6E6;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 3px #83B3D3 inset;
+}
+
+.text-input:active {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 0 0 2px #000000 inset;
+}
+
+.text-input:disabled {
+  background-color: #E5E5E5;
+}
+
+.text-input:invalid {
+  box-shadow: 0 0 0 2px #FF5757 inset;
+}
+
+.text-input::placeholder {
+  opacity: 0.6;
+}
+
 
 /*ФУТЕР*/
 .page-footer {
@@ -577,7 +623,7 @@ body {
   color: #ffffff;
   background-color: #000000;
   background-image: url("../images/background-catalog.jpg");
-  background-position: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 35px 70px 70px;
 }
@@ -629,35 +675,200 @@ body {
 /*ФОРМА ПОИСКА ГОСТИНИЦЫ*/
 .hotel-search-filter {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .hotel-search-wrapper {
   display: flex;
-  width: 380px;
-  justify-content: space-between;
-}
-
-.search-buttons-wrapper {
-  margin-left: auto;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .hotel-filter-group {
-  width: 155px;
   margin: 0;
   padding: 0;
   border: 0;
+  margin-right: 70px;
 }
 
 .hotel-filter-title {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  margin-bottom: 30px;
 }
 
-.catalog-filter-title {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
+.range-wrapper-inputs {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.range-input {
+  width: 144px;
+  height: 48px;
+  padding: 14px 31px 13px 19px;
+  font: inherit;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  appearance: textfield;
+}
+
+.range-input:hover {
+  border-color: #B6BDC2;
+}
+
+.range-input:focus {
+  box-shadow: 0 0 0 3px #81B3D2,
+              0 0 0 3px #81B3D2 inset;
+  outline: none;
+  z-index: 1;
+}
+
+.range-input:hover {
+  background-color: #756257;
+  box-shadow: none;
+  border-color: #FFFFFF;
+}
+
+.range-input-left {
+  border-radius: 4px 0 0 4px;
+  border-right-width: 1px;
+}
+
+.range-input-right {
+  border-radius: 0 4px 4px 0;
+  border-left-width: 1px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.hotel-filter-label {
+  opacity: 0.3;
+  position: absolute;
+  align-self: center;
+}
+
+.hotel-filter-label-start {
+  left: 110px;
+}
+
+.hotel-filter-label-end {
+  left: 253px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #727274;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -2px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -2px;
+}
+
+.range-toggle:focus {
+  box-shadow: 0 0 0 3px #83B3D3,
+  0 4px 10px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.range-toggle:active {
+  box-shadow: 0 0 0 2px #83B3D3,
+              0 7px 15px rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+}
+
+.hotel-filter-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.control:hover .control-mark {
+  background-color: #C9DAE8;
+}
+
+/* не работает - табом не выделяет. не поняла почему */
+.control:focus .control-mark {
+  background-color: #C9DAE8;
+  box-shadow: 0 0 0 3px #83B3D3,
+}
+
+.control:active .control-mark {
+  background-color: #97B5D1;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/icons/tick.svg');
+  background-size: 12px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+
+.search-buttons-wrapper {
+ align-self: flex-end;
 }
 
 /*РЕЗУЛЬТАТЫ ПОИСКА*/

@@ -65,7 +65,7 @@
             </ol>
     <!-- ФОРМА ПОИСКА ГОСТИНИЦЫ -->
             <section class="hotel-search-form">
-              <h2 class="visually-hidden" hidden>Форма поиска Гостиницы</h2>
+              <h2 class="visually-hidden">Форма поиска Гостиницы</h2>
               <form class="hotel-search-filter" action="https://echo.htmlacademy.ru/" method="get">
                 <div class="hotel-search-wrapper">
                   <fieldset class="hotel-filter-group">
@@ -73,52 +73,80 @@
                     <ul class="hotel-filter-list clear-list">
                       <li class="hotel-filter-item">
                         <label class="control">
-                          <input class="control-input" type="checkbox" name="pool" checked>
-                          Бассейн
+                          <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-label">Бассейн</span>
                         </label>
                       </li>
                       <li class="hotel-filter-item">
                         <label class="control">
-                          <input class="control-input" type="checkbox" name="parking" checked>
-                          Парковка
+                          <input class="visually-hidden control-input" type="checkbox" name="parking">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Парковка</span>
                         </label>
                       </li>
                       <li class="hotel-filter-item">
                         <label class="control">
-                          <input class="control-input" type="checkbox" name="wi-fi">
-                          Wi-Fi
+                          <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Wi-Fi</span>
                         </label>
                       </li>
                     </ul>
                   </fieldset>
                   <fieldset class="hotel-filter-group">
-                    <legend class="catalog-filter-title">Тип Жилья</legend>
+                    <legend class="hotel-filter-title">Тип Жилья</legend>
                     <ul class="hotel-filter-list clear-list">
                       <li class="hotel-filter-item">
                         <label class="control">
-                          <input class="control-input" type="radio" name="hotel-type" value="hotel" checked>
-                          Гостиница
+                          <input class="visually-hidden control-input" type="radio" name="hotel-type" value="hotel" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-label">Гостиница</span>
                         </label>
                       </li>
                       <li class="hotel-filter-item">
                         <label class="control">
-                          <input class="control-input" type="radio" name="hotel-type" value="motel">
-                          Мотель
+                          <input class="visually-hidden control-input" type="radio" name="hotel-type" value="motel">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Мотель</span>
                         </label>
                       </li>
                       <li class="hotel-filter-item">
                         <label class="control">
-                          <input class="control-input" type="radio" name="hotel-type" value="apartment">
-                          Апартаменты
+                          <input class="visually-hidden control-input" type="radio" name="hotel-type" value="apartment">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Апартаменты</span>
                         </label>
                       </li>
                     </ul>
                   </fieldset>
                 </div>
-                <div class="search-buttons-wrapper">
-    <!-- выбор диапазона стоимости не сверстан -->
-                  <button class="button submit-button" type="submit">Применить</button>
-                  <button class="button transparent-button" type="reset">Сбросить</button>
+                <div class="hotel-search-wrapper">
+                  <fieldset class="hotel-filter-group">
+                    <legend class="hotel-filter-title">Стоимость, ₽:</legend>
+                    <div class="range">
+                      <div class="range-wrapper-inputs">
+                        <label class="hotel-filter-label hotel-filter-label-start" for="range-input-left">от</label>
+                        <input class="range-input range-input-left" id="range-input-left" type="number" value="0" name="min-price">
+                        <label class="hotel-filter-label hotel-filter-label-end" for="range-input-right">до</label>
+                        <input class="range-input range-input-right" id="range-input-right" type="number" value="9000" name="max-price">
+                      </div>
+                      <div class="range-scale">
+                        <div class="range-bar" style="width: 228px">
+                          <button class="range-toggle toggle-min">
+                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                          </button>
+                          <button class="range-toggle toggle-max">
+                            <span class="visually-hidden">Изменить максимальную цену.</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="search-buttons-wrapper">
+                    <button class="button submit-button" type="submit">Применить</button>
+                    <button class="button transparent-button" type="reset">Сбросить</button>
+                  </div>
                 </div>
               </form>
             </section>
