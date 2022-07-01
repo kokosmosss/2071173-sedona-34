@@ -346,9 +346,9 @@
         </a>
       </footer>
       <!-- МОДАЛЬНОЕ ОКНО -->
-      <div class="modal-container">
+      <div class="modal-container modal-container-close">
         <div class="modal modal-search">
-          <button class="modal-close-button">
+          <button class="modal-button modal-close-button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
@@ -372,7 +372,7 @@
               </button>
 
               <label class="modal-label label-date" for="cheak-out">Дата Выезда:</label>
-              <input class="modal-form-field field-date" type="text" id="cheak-out" name="auth-password"
+              <input class="modal-form-field field-date" type="text" id="cheak-out" name="cheak-out"
                 placeholder="Укажите дату">
               <button class="calendar-button calendar-button-2" type="button">
                 <svg class="calendar-icon" aria-hidden="true" focusable="false" width="15" height="15"
@@ -389,8 +389,15 @@
               </button>
               <label class="modal-label field-adults" for="adults">Взрослые:</label>
               <input class="modal-form-field" type="number" id="adults" name="adults" placeholder="1">
-
-              <label class="modal-label field-children" for="children">Дети:</label>
+              <span class="modal-label field-children">
+                <label class="modal-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button">
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
+                    лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
               <input class="modal-form-field" type="number" id="children" name="children" placeholder="0">
 
               <button class="button modal-search-button" type="submit">Найти</button>
