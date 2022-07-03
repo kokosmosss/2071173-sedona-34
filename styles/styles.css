@@ -66,6 +66,8 @@ body {
   border-radius: 4px;
   padding: 8px 15px;
   border: none;
+  margin: 0;
+  outline: 0;
 }
 
 .button:disabled {
@@ -1139,20 +1141,26 @@ body {
 }
 
 /* КНОПКИ В МОДАЛЬНОМ ОКНЕ */
-.modal-close-button {
-  position: absolute;
+.modal-button {
   padding: 0;
-  top: 66px;
-  right: 64px;
-  width: 53px;
-  height: 53px;
-  background-color: #F2F2F2;
+  margin: 0;
   border: none;
-  border-radius: 50%;
-  background-image: url("../images/icons/cross.svg");
+  outline: none;
+  cursor: pointer;
+  background-color: #F2F2F2;
   background-repeat: no-repeat;
   background-position: center;
-  cursor: pointer;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 54px;
+  right: 71px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-image: url("../images/icons/cross.svg");
+
 }
 
 .modal-button:hover {
@@ -1160,7 +1168,7 @@ body {
 }
 
 .modal-button:focus {
-  box-shadow: 0 0 0 3px #83B3D3;
+  box-shadow: 0 0 0 3px #83B3D3 inset;
   background-color: #E6E6E6;
 }
 
@@ -1178,21 +1186,33 @@ body {
   position: absolute;
   padding: 0;
   box-sizing: border-box;
-}
-/* мне кажется это плохо, но как по другому - не соображу */
-.calendar-button-1 {
-top: 16px;
-right: 16px;
+  top: 16px;
+  right: 19px;
 }
 
-.calendar-button-2 {
-  top: 106px;
-  right: 16px;
+.counter-button {
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  border-radius: 4px;
+  opacity: 0.3;
+}
+
+.counter-button:hover {
+  opacity: 1;
+  background-color: #F2f2f2;
+}
+
+.button-plus {
+  background-image: url("../images/icons/plus.svg");
+}
+.button-minus {
+  background-image: url("../images/icons/minus.svg");
 }
 
 .modal-search-button {
-  grid-column: 1 / -1;
   height: 60px;
+  width: 575px;
 }
 
 .modal-search-button:focus {
@@ -1200,23 +1220,20 @@ right: 16px;
 }
 
 /* ФОРМА */
-.search-modal-form {
+.modal-area {
   display: grid;
-  grid-template-columns: 155px 133px 153px 134px;
-  row-gap: 40px;
+  grid-template-columns: 155px 420px;
   align-items: center;
-  position: relative;
 }
 
-.label-date {
-  grid-column: 1 / 2;
+.modal-area-small {
+  display: grid;
+  grid-template-columns: 155px 133px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-.field-date {
-  grid-column: 2 / 5;
-}
-
-.field-children {
+.children-label {
   padding-left: 56px;
   padding-right: 43px;
 }
@@ -1225,6 +1242,7 @@ right: 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  position: relative;
 }
 
 .modal-form-field {
@@ -1239,6 +1257,45 @@ right: 16px;
   padding: 15px 19px;
   box-sizing: border-box;
   appearance: textfield;
+  width: 420px;
+  margin: 0;
+}
+
+.small-field {
+  width: 33px;
+  padding: 15px 10px;
+}
+
+.modal-form-wrapper {
+  position: relative;
+}
+
+.modal-wrapper-flex {
+  display: flex;
+}
+
+.modal-form-wrapper-small {
+  display: flex;
+  background-color: #F2F2F2;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.message {
+  font-size: 16px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.message-error {
+  color: #FF5757;
+  grid-column: 2 / 5;
+}
+
+.message-correct {
+  color: #333333;
+  grid-column: 2 / 5;
 }
 
 .modal-form-field:hover {
@@ -1270,31 +1327,11 @@ right: 16px;
   margin: 0;
 }
 
-/* ПОДСКАЗКИ */
-.message {
-  font-size: 16px;
-  line-height: 40px;
-  margin: 0;
-  position: absolute;
-}
-
-.message-error {
-  color: #FF5757;
-  top: 210px;
-  right: 208px;
-}
-
-.message-correct {
-  color: #333333;
-  top: 301px;
-  right: 158px;
-}
-
 /* ТУЛТИП */
 .tooltip {
   position: absolute;
-  bottom: 111px;
-  left: 396px;
+  bottom: 0;
+  left: 108px;
   width: 25px;
   height: 25px;
 }
