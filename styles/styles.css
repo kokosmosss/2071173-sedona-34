@@ -67,7 +67,7 @@ body {
   padding: 8px 15px;
   border: none;
   margin: 0;
-  outline: 0;
+  outline: none;
 }
 
 .button:disabled {
@@ -215,10 +215,16 @@ body {
   color: #000000;
   display: block;
   padding: 20px 17px;
+  border:none;
+  outline: none;
 }
 
 .navigation-link:hover {
   color: #615048;
+}
+
+.navigation-link:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
 }
 
 .navigavion-user {
@@ -250,12 +256,8 @@ body {
   position: relative;
 }
 
-.navigation-link-search {
-  background-image: url('../images/icons/search.svg');
-}
-
-.navigation-link-favorite {
-  background-image: url('../images/icons/heart.svg');
+.navigavion-icon {
+  fill: #000000;
 }
 
 .favorite-counter {
@@ -507,6 +509,7 @@ body {
   border-radius: 10px 0 0 10px;
   box-sizing: border-box;
   padding: 22px 20px;
+  margin: 0;
 }
 
 .text-input:hover {
@@ -546,6 +549,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: auto;
+  align-items: center;
 }
 
 .social-networks {
@@ -557,11 +561,17 @@ body {
   flex-wrap: wrap;
 }
 
+.contacts-phone {
+  width: 388px;
+}
+
 .contacts-phone-link {
   font-size: 40px;
   line-height: 40px;
   color: #000000;
   text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 .contacts-phone-link:hover {
@@ -578,6 +588,8 @@ body {
 
 .htmlacademy-logo-link {
   width: 115px;
+  border: none;
+  outline: none;
 }
 
 .htmlacademy-logo-icon {
@@ -600,7 +612,9 @@ body {
   display: block;
   max-height: 18px;
   max-width: 24px;
-  padding: 14px;
+  padding: 13px;
+  border: none;
+  outline: none;
 }
 
 .social-icon {
@@ -655,7 +669,7 @@ body {
 .breadcrumbs-item::after {
   position: absolute;
   top: 17px;
-  right: -3px;
+  right: -5px;
   width: 6px;
   height: 8px;
   content: "";
@@ -672,17 +686,23 @@ body {
   padding: 10px;
   min-width: 12px;
   min-height: 12px;
+  border: none;
+  outline: none;
 }
 
-.breadcrumbs-link:hover {
+.breadcrumbs-link-start {
+  padding-left: 2px;
+}
+
+.breadcrumbs-link:not(.breadcrumbs-link-current):hover {
   opacity: 0.6;
 }
 
-.breadcrumbs-link:focus{
+.breadcrumbs-link:not(.breadcrumbs-link-current):focus {
   opacity: 1;
 }
 
-.breadcrumbs-link:active {
+.breadcrumbs-link:not(.breadcrumbs-link-current):active {
   opacity: 0.3;
 }
 
@@ -719,7 +739,7 @@ body {
 
 .range-wrapper-inputs {
   display: flex;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 }
 
 .range-input {
@@ -740,7 +760,7 @@ body {
 
 .range-input:focus {
   box-shadow: 0 0 0 3px #81B3D2,
-              0 0 0 3px #81B3D2 inset;
+    0 0 0 3px #81B3D2 inset;
   outline: none;
   z-index: 1;
 }
@@ -750,13 +770,10 @@ body {
   box-shadow: none;
   border-color: #FFFFFF;
 }
-/*
-не получается сделать placeholder белым. штуки ниже не помогают, он все равно прозрачный
-.range-input::-webkit-input-placeholder,
-.range-input::-moz-placeholder,
-.range-input:-moz-placeholder {
+
+.range-input::placeholder {
   color: #FFFFFF;
-} */
+}
 
 
 .range-input-left {
@@ -818,18 +835,18 @@ body {
 
 .toggle-max {
   top: -8px;
-  right: -2px;
+  right: -8px;
 }
 
 .range-toggle:focus {
   box-shadow: 0 0 0 3px #83B3D3,
-               0 4px 10px rgba(0, 0, 0, 0.25);
+    0 4px 10px rgba(0, 0, 0, 0.25);
   outline: none;
 }
 
 .range-toggle:active {
   box-shadow: 0 0 0 2px #83B3D3,
-              0 7px 15px rgba(0, 0, 0, 0.4);
+    0 7px 15px rgba(0, 0, 0, 0.4);
   outline: none;
 }
 
@@ -857,13 +874,12 @@ body {
   background-color: #C9DAE8;
 }
 
-/* не работает - табом не выделяет. не поняла почему */
-.control:focus .control-mark {
+.control-input:focus + .control-mark {
   background-color: #C9DAE8;
   box-shadow: 0 0 0 3px #83B3D3,
 }
 
-.control:active .control-mark {
+.control-input:active .control-mark {
   background-color: #97B5D1;
 }
 
@@ -894,12 +910,12 @@ body {
 }
 
 .search-buttons-wrapper {
- align-self: flex-end;
+  align-self: flex-end;
 }
 
 /*РЕЗУЛЬТАТЫ ПОИСКА*/
 .hotel-search-results {
-  padding: 62px 72px 25px;
+  padding: 52px 72px 25px;
 }
 
 .hotel-search-result {
@@ -908,14 +924,15 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  max-width: 500px;
+  max-width: 528px;
   flex-grow: 1;
 }
 
 .search-results-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 56px;
+  margin-bottom: 53px;
+  align-items: center;
 }
 
 /*ОТОБРАЖЕНИЕ НА СТРАНИЦЕ*/
@@ -933,7 +950,7 @@ body {
   appearance: none;
   background-image: url('../images/icons/arrow.svg');
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 13px center;
 }
 
 .select-control:hover {
@@ -1048,6 +1065,7 @@ body {
 
 .hotel-card-title {
   margin: 16px 0;
+  font-size: 24px;
 }
 
 .hotel-card-type {
@@ -1110,7 +1128,6 @@ body {
 }
 
 /* МОДАЛЬНОЕ ОКНО */
-
 .modal-container {
   position: fixed;
   top: 0;
@@ -1206,6 +1223,7 @@ body {
 .button-plus {
   background-image: url("../images/icons/plus.svg");
 }
+
 .button-minus {
   background-image: url("../images/icons/minus.svg");
 }
@@ -1259,6 +1277,8 @@ body {
   appearance: textfield;
   width: 420px;
   margin: 0;
+  outline: none;
+  border: none;
 }
 
 .small-field {
@@ -1339,7 +1359,7 @@ body {
 .tooltip-toggle {
   border: none;
   border-radius: 50px;
-  background-color:#83B3D3;
+  background-color: #83B3D3;
   padding: 0;
   margin: 0;
   margin-bottom: 15px;
@@ -1352,7 +1372,7 @@ body {
   background-position: center;
 }
 
-.tooltip-toggle:hover  {
+.tooltip-toggle:hover {
   background-color: #68A2CA;
 }
 
