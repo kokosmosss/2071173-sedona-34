@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
 }
 
 .clear-list {
@@ -56,7 +57,7 @@ body {
   line-height: 20px;
   font-weight: 700;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -68,23 +69,24 @@ body {
   border: none;
   margin: 0;
   outline: none;
+  cursor: pointer;
 }
 
 .button:disabled {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .button:hover {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .button:focus {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .button:active {
-  background-color: #82B3D3;
-  color: #A7CAE0;
+  background-color: #82b3d3;
+  color: #a7cae0;
 }
 
 .brown-button {
@@ -101,24 +103,24 @@ body {
 
 .brown-button:active {
   background-color: #756157;
-  color: #9E9089;
+  color: #9e9089;
 }
 
 .green-button {
-  background-color: #7DB54F;
+  background-color: #7db54f;
 }
 
 .green-button:hover {
-  background-color: #6C9E42;
+  background-color: #6c9e42;
 }
 
 .green-button:focus {
-  background-color: #6C9E42;
+  background-color: #6c9e42;
 }
 
 .green-button:active {
-  background-color: #7DB54F;
-  color: #A4CB84;
+  background-color: #7db54f;
+  color: #a4cb84;
 }
 
 .navigation-button {
@@ -129,6 +131,7 @@ body {
 .submit-button {
   padding: 14px 15px;
   min-width: 160px;
+  margin-bottom: 10px;
 }
 
 .transparent-button {
@@ -141,13 +144,13 @@ body {
 }
 
 .transparent-button:hover {
-  color: #B2B3B4;
+  color: #b2b3b4;
   background-color: transparent;
 }
 
 .transparent-button:focus {
   background-color: transparent;
-  border: 3px solid #83B3D3;
+  border: 3px solid #83b3d3;
 }
 
 .transparent-button:active {
@@ -178,7 +181,7 @@ body {
   line-height: 36px;
   width: 60px;
   height: 60px;
-  border: 1px solid #82B3D3;
+  border: 1px solid #82b3d3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,12 +222,16 @@ body {
   outline: none;
 }
 
-.navigation-link:hover {
+.navigation-link:not(.navigation-link-current):hover {
   color: #615048;
 }
 
-.navigation-link:focus {
-  box-shadow: 0 0 0 3px #83B3D3;
+.navigation-link:not(.navigation-link-current):focus {
+  box-shadow: 0 0 0 3px #83b3d3 inset;
+}
+
+.navigation-link:not(.navigation-link-current):active {
+  opacity: 0.3;
 }
 
 .navigavion-user {
@@ -237,13 +244,14 @@ body {
   width: 18px;
   height: 18px;
   padding: 23px 12px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 18px 18px;
   position: relative;
 }
 
-.navigation-link-current::before {
+ .navigation-link:hover .navigavion-icon {
+  fill: #615048;
+}
+
+.navigation-link-current-decoration::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -252,7 +260,7 @@ body {
   z-index: 2;
 }
 
-.navigation-link-current {
+.navigation-link-current-decoration {
   position: relative;
 }
 
@@ -261,19 +269,34 @@ body {
 }
 
 .favorite-counter {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: -0.1em;
   width: 20px;
   height: 20px;
+  border-radius: 50%;
+  background-color: #7db54f;
+  color: #ffffff;
   position: absolute;
-  background-repeat: no-repeat;
-  top: 13px;
-  right: -1px;
-  background-image: url('../images/icons/favorite-counter.svg');
-  background-size: 20px 20px;
+  top: 14px;
+  right: -2px;
+  padding: 3px 5px;
+  box-sizing: border-box;
 }
 
 .main-header-logo {
   display: block;
   margin-right: 30px;
+}
+
+.main-header-logo[href="index.html"]:hover {
+  opacity: 0.6;
+}
+
+.main-header-logo[href="index.html"]:active {
+  opacity: 0.3;
 }
 
 .main-logo-image {
@@ -390,8 +413,8 @@ body {
 }
 
 .advantages-item-blue {
-  background-color: #82B3D3;
-  color: #FFFFFF;
+  background-color: #82b3d3;
+  color: #ffffff;
   width: 33.33%;
   padding: 92px 85px;
   box-sizing: border-box;
@@ -402,14 +425,14 @@ body {
 }
 
 .advantages-item-lightblue {
-  background-color: #F0F6FA;
+  background-color: #f0f6fa;
   color: #000000;
   padding: 103px 85px 102px;
   box-sizing: border-box;
 }
 
 .advantages-sublist .advantages-item-lightblue {
-  padding: 80px 85px 81px;
+  padding: 80px 97px 81px;
 }
 
 .advantages-sublist .advantages-title {
@@ -417,14 +440,14 @@ body {
 }
 
 .advantages-item-darktblue {
-  background-color: #E6F0F6;
+  background-color: #e6f0f6;
   color: #000000;
   padding: 103px 85px 102px;
   box-sizing: border-box;
 }
 
 .advantages-item-white {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000000;
   padding: 80px 85px 81px;
   box-sizing: border-box;
@@ -468,7 +491,7 @@ body {
 /*СЕКЦИЯ ПОДПИСКИ НА РАССЫЛКУ*/
 .email-subscribe {
   text-align: center;
-  padding: 94px 0;
+  padding: 93px 0;
 }
 
 .smooth-background {
@@ -513,35 +536,34 @@ body {
 }
 
 .text-input:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   border: none;
 }
 
 .text-input:focus {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   border: none;
   outline: none;
-  box-shadow: 0 0 0 3px #83B3D3 inset;
+  box-shadow: 0 0 0 3px #83b3d3 inset;
 }
 
-.text-input:active {
+.text-input:not(:placeholder-shown) {
   background-color: #ffffff;
   border: none;
   box-shadow: 0 0 0 2px #000000 inset;
 }
 
 .text-input:disabled {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .text-input:invalid {
-  box-shadow: 0 0 0 2px #FF5757 inset;
+  box-shadow: 0 0 0 2px #ff5757 inset;
 }
 
 .text-input::placeholder {
   opacity: 0.6;
 }
-
 
 /*ФУТЕР*/
 .page-footer {
@@ -583,7 +605,7 @@ body {
 }
 
 .contacts-phone-link:active {
-  color: #D6D0CD;
+  color: #d6d0cd;
 }
 
 .htmlacademy-logo-link {
@@ -605,7 +627,7 @@ body {
 }
 
 .htmlacademy-logo-link:active .htmlacademy-logo-icon {
-  fill: #D6D0CD;
+  fill: #d6d0cd;
 }
 
 .button-social {
@@ -618,19 +640,19 @@ body {
 }
 
 .social-icon {
-  fill: #83B3D3;
+  fill: #83b3d3;
 }
 
 .button-social:hover .social-icon {
-  fill: #68A2CA;
+  fill: #68a2ca;
 }
 
 .button-social:focus .social-icon {
-  fill: #68A2CA;
+  fill: #68a2ca;
 }
 
 .button-social:active .social-icon {
-  fill: #D2E3EF;
+  fill: #d2e3ef;
 }
 
 /*КАТАЛОГ. ОСНОВНАЯ ЧАСТЬ. ХЕДЕР-ДЛЯ ПОИСКА ГОСТИНИЦЫ*/
@@ -645,7 +667,7 @@ body {
   background-image: url("../images/background-catalog.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 35px 70px 70px;
+  padding: 35px 70px 63px;
 }
 
 .catalog-header-title {
@@ -707,7 +729,7 @@ body {
 }
 
 .breadcrumbs-home-icon {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 /*ФОРМА ПОИСКА ГОСТИНИЦЫ*/
@@ -747,20 +769,20 @@ body {
   height: 48px;
   padding: 14px 31px 13px 19px;
   font: inherit;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: transparent;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   box-sizing: border-box;
   appearance: textfield;
 }
 
 .range-input:hover {
-  border-color: #B6BDC2;
+  border-color: #b6bdc2;
 }
 
 .range-input:focus {
-  box-shadow: 0 0 0 3px #81B3D2,
-    0 0 0 3px #81B3D2 inset;
+  box-shadow: 0 0 0 3px #81b3d2,
+    0 0 0 3px #81b3d2 inset;
   outline: none;
   z-index: 1;
 }
@@ -768,11 +790,11 @@ body {
 .range-input:not(:placeholder-shown) {
   background-color: #756257;
   box-shadow: none;
-  border-color: #FFFFFF;
+  border-color: #ffffff;
 }
 
 .range-input::placeholder {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 
@@ -839,13 +861,13 @@ body {
 }
 
 .range-toggle:focus {
-  box-shadow: 0 0 0 3px #83B3D3,
+  box-shadow: 0 0 0 3px #83b3d3,
     0 4px 10px rgba(0, 0, 0, 0.25);
   outline: none;
 }
 
 .range-toggle:active {
-  box-shadow: 0 0 0 2px #83B3D3,
+  box-shadow: 0 0 0 2px #83b3d3,
     0 7px 15px rgba(0, 0, 0, 0.4);
   outline: none;
 }
@@ -867,20 +889,20 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .control:hover .control-mark {
-  background-color: #C9DAE8;
+  background-color: #c9dae8;
 }
 
 .control-input:focus + .control-mark {
-  background-color: #C9DAE8;
-  box-shadow: 0 0 0 3px #83B3D3,
+  background-color: #c9dae8;
+  box-shadow: 0 0 0 3px #83b3d3,
 }
 
 .control-input:active .control-mark {
-  background-color: #97B5D1;
+  background-color: #97b5d1;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
@@ -904,13 +926,13 @@ body {
   left: 5px;
   width: 10px;
   height: 10px;
-  background-color: #3F5E72;
+  background-color: #3f5e72;
   border-radius: 50%;
   content: "";
 }
 
 .search-buttons-wrapper {
-  align-self: flex-end;
+  margin-top: 60px;
 }
 
 /*РЕЗУЛЬТАТЫ ПОИСКА*/
@@ -943,7 +965,7 @@ body {
   color: #333333;
   width: 290px;
   height: 49px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 4px;
@@ -954,15 +976,15 @@ body {
 }
 
 .select-control:hover {
-  border-color: #68A2CA;
+  border-color: #68a2ca;
 }
 
 .select-control:focus {
-  border-color: #68A2CA;
+  border-color: #68a2ca;
 }
 
 .select-control:active {
-  border-color: #3F5E72;
+  border-color: #3f5e72;
 }
 
 /* почему все равно работает рамка ховера? */
@@ -986,7 +1008,7 @@ body {
   margin-right: 8px;
   margin-bottom: 8px;
   box-sizing: border-box;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   background-size: 16px 14px;
   background-position: center;
@@ -998,7 +1020,7 @@ body {
 }
 
 .button-view:focus {
-  border-color: #68A2CA;
+  border-color: #68a2ca;
 }
 
 .button-view:active {
@@ -1034,7 +1056,7 @@ body {
   content: "";
   position: absolute;
   width: 100%;
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #e6e6e6;
   bottom: -68px;
 }
 
@@ -1141,7 +1163,7 @@ body {
 .modal {
   position: relative;
   margin: auto;
-  padding: 62px 70px 70px;
+  padding: 61px 69px 70px;
   background-color: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
@@ -1164,7 +1186,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1181,12 +1203,12 @@ body {
 }
 
 .modal-button:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .modal-button:focus {
-  box-shadow: 0 0 0 3px #83B3D3 inset;
-  background-color: #E6E6E6;
+  box-shadow: 0 0 0 3px #83b3d3 inset;
+  background-color: #e6e6e6;
 }
 
 .modal-button:active {
@@ -1197,7 +1219,7 @@ body {
   margin-left: auto;
   width: 16px;
   height: 16px;
-  color: #A9A9A9;
+  color: #a9a9a9;
   border: none;
   cursor: pointer;
   position: absolute;
@@ -1217,7 +1239,7 @@ body {
 
 .counter-button:hover {
   opacity: 1;
-  background-color: #F2f2f2;
+  background-color: #f2f2f2;
 }
 
 .button-plus {
@@ -1268,7 +1290,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 4px;
   height: 50px;
   border: none;
@@ -1278,7 +1300,6 @@ body {
   width: 420px;
   margin: 0;
   outline: none;
-  border: none;
 }
 
 .small-field {
@@ -1296,7 +1317,7 @@ body {
 
 .modal-form-wrapper-small {
   display: flex;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   justify-content: space-between;
   align-items: center;
   border-radius: 4px;
@@ -1309,7 +1330,7 @@ body {
 }
 
 .message-error {
-  color: #FF5757;
+  color: #ff5757;
   grid-column: 2 / 5;
 }
 
@@ -1319,12 +1340,12 @@ body {
 }
 
 .modal-form-field:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .modal-form-field:focus {
-  box-shadow: 0 0 0 3px #83B3D3;
-  background-color: #E6E6E6;
+  box-shadow: 0 0 0 3px #83b3d3;
+  background-color: #e6e6e6;
 }
 
 .modal-form-field:active {
@@ -1359,7 +1380,7 @@ body {
 .tooltip-toggle {
   border: none;
   border-radius: 50px;
-  background-color: #83B3D3;
+  background-color: #83b3d3;
   padding: 0;
   margin: 0;
   margin-bottom: 15px;
@@ -1373,18 +1394,17 @@ body {
 }
 
 .tooltip-toggle:hover {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .tooltip-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  display: block;
   width: 256px;
   padding: 15px 18px 18px 22px;
   box-sizing: border-box;

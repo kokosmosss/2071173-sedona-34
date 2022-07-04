@@ -17,11 +17,11 @@
         <nav class="page-navigation">
           <a class="main-header-logo" title="Логотип сайта городка Седона">
             <img class="main-logo-image" src="images/logo.svg" width="139" height="70"
-              alt="Логотип сайта городка Седона">
+              alt="Логотип сайта городка Седона.">
           </a>
           <ul class="navigavion-list clear-list">
             <li class="navigation-item">
-              <a class="navigation-link"><span class="navigation-link-current">Главная</span></a>
+              <a class="navigation-link navigation-link-current"><span class="navigation-link-current-decoration">Главная</span></a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">О Седоне</a>
@@ -34,13 +34,24 @@
           <ul class="navigavion-list navigavion-user clear-list">
             <li class="navigation-item">
               <a class="navigation-link navigation-link-search" href="#">
+                <svg class="navigavion-icon" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 20 20"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" />
+                </svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link navigation-link-favorite" href="#">
                 <span class="visually-hidden">Избранное</span>
-                <span class="favorite-counter"></span>
+                <svg class="navigavion-icon" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 20 20"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.9 19a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
+                </svg>
+                <span class="favorite-counter">12</span>
+                <span class="visually-hidden">Нравится.</span>
               </a>
             </li>
             <li class="navigation-item">
@@ -68,12 +79,12 @@
                 <span class="advantages-decoration-number">— №1 —</span>
                 <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img class="img-sedona" src="images/advantages-sedona.jpg" width="800" height="384" alt="Уютная Седона">
+              <img class="img-sedona" src="images/advantages-sedona.jpg" width="800" height="384" alt="Уютная Седона.">
               <ul class="advantages-sublist clear-list">
                 <li class="advantages-item advantages-item-lightblue advantages-item-icon advantages-item-house">
                   <h4 class="advantages-title">Жильё</h4>
                   <p class="advantages-description advantages-description-dark">Рекомендуем пожить <br> в настоящем
-                    мотеле,
+                    мотеле,<br>
                     всё как в кино!</p>
                 </li>
                 <li class="advantages-item advantages-item-white advantages-item-icon advantages-item-food">
@@ -95,7 +106,7 @@
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img class="img-canyon" src="images/advantages-canyon.jpg" width="800" height="384"
-                alt="Каньон Мост Дьявола">
+                alt="Каньон Мост Дьявола.">
             </li>
             <li class="advantages-item advantages-item-lightblue">
               <h3 class="advantages-title">Небольшая площадь </h3>
@@ -122,7 +133,7 @@
           <h2 class="visually-hidden">Поиск гостиницы</h2>
           <p class="hotel-search-question">Заинтересовались?</p>
           <p class="hotel-search-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие
-            предложения гостиниц в Седоне
+            предложения гостиниц в Седоне &nbsp
           </p>
           <a class="button brown-button hotel-search-button" href="#">Поиск гостиницы в Седоне</a>
         </section>
@@ -189,7 +200,7 @@
       </footer>
     </div>
     <!-- МОДАЛЬНОЕ ОКНО -->
-    <div class="modal-container">
+    <div class="modal-container modal-container-close">
       <div class="modal modal-search">
         <button class="modal-button modal-close-button">
           <span class="visually-hidden">Закрыть</span>
@@ -200,7 +211,7 @@
             <div class="modal-area">
               <label class="modal-label" for="cheak-in">Дата Заезда:</label>
               <div class="modal-form-wrapper">
-                <input class="modal-form-field" type="text" id="cheak-in" name="cheak-in" placeholder="Укажите дату">
+                <input class="modal-form-field" type="text" id="cheak-in" name="cheak-in" placeholder="27 апреля 2020">
                 <button class="calendar-button" type="button">
                   <svg class="calendar-icon" aria-hidden="true" focusable="false" width="15" height="15"
                     viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,7 +232,7 @@
             <div class="modal-area">
               <label class="modal-label" for="cheak-out">Дата Выезда:</label>
               <div class="modal-form-wrapper">
-                <input class="modal-form-field" type="text" id="cheak-out" name="cheak-out" placeholder="Укажите дату">
+                <input class="modal-form-field" type="text" id="cheak-out" name="cheak-out" placeholder="1 сентября 2021">
                 <button class="calendar-button" type="button">
                   <svg class="calendar-icon" aria-hidden="true" focusable="false" width="15" height="15"
                     viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
