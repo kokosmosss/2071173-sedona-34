@@ -975,6 +975,7 @@ body {
   background-image: url('../images/icons/arrow.svg');
   background-repeat: no-repeat;
   background-position: right 13px center;
+  margin: 0;
 }
 
 .select-control:hover {
@@ -989,10 +990,10 @@ body {
   border-color: #3f5e72;
 }
 
-/* почему все равно работает рамка ховера? */
 .select-control:disabled,
 .select-control:disabled:hover {
   opacity: 0.3;
+  border-color: #e5e5e5;
 }
 
 .view-buttons {
