@@ -139,7 +139,7 @@ body {
   background-color: transparent;
   text-transform: capitalize;
   width: 100px;
-  height: 32px;
+  min-height: 32px;
   margin: 0 auto;
 }
 
@@ -164,7 +164,7 @@ body {
   line-height: 36px;
   margin: 0 auto;
   width: 574px;
-  height: 60px;
+  min-height: 60px;
   padding: 12px 15px;
 }
 
@@ -179,8 +179,8 @@ body {
 .pagination-button {
   font-size: 20px;
   line-height: 36px;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   border: 1px solid #82b3d3;
   display: flex;
   justify-content: center;
@@ -433,6 +433,7 @@ body {
 
 .advantages-sublist .advantages-item-lightblue {
   padding: 80px 97px 81px;
+  min-width: 400px;
 }
 
 .advantages-sublist .advantages-title {
@@ -451,6 +452,7 @@ body {
   color: #000000;
   padding: 80px 85px 81px;
   box-sizing: border-box;
+  min-width: 400px;
 }
 
 .advantages-description {
@@ -525,7 +527,7 @@ body {
 
 .text-input {
   font: inherit;
-  height: 60px;
+  min-height: 60px;
   background-color: #f2f2f2;
   flex-grow: 1;
   border: none;
