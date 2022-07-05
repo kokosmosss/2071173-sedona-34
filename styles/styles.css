@@ -30,7 +30,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
 }
 
 .clear-list {
@@ -48,6 +47,11 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /*КНОПКИ*/
@@ -218,7 +222,7 @@ body {
   color: #000000;
   display: block;
   padding: 20px 17px;
-  border:none;
+  border: none;
   outline: none;
 }
 
@@ -247,7 +251,7 @@ body {
   position: relative;
 }
 
- .navigation-link:hover .navigavion-icon {
+.navigation-link:hover .navigavion-icon {
   fill: #615048;
 }
 
@@ -493,7 +497,7 @@ body {
 /*СЕКЦИЯ ПОДПИСКИ НА РАССЫЛКУ*/
 .email-subscribe {
   text-align: center;
-  padding: 93px 0;
+  padding: 88px 0 93px;
 }
 
 .smooth-background {
@@ -502,6 +506,7 @@ body {
   background-repeat: no-repeat;
   color: #ffffff;
   background-color: #000000;
+  padding: 92px 0 93px;
 }
 
 .subscribe-title {
@@ -533,7 +538,7 @@ body {
   border: none;
   border-radius: 10px 0 0 10px;
   box-sizing: border-box;
-  padding: 22px 20px;
+  padding: 19px 20px;
   margin: 0;
 }
 
@@ -669,7 +674,7 @@ body {
   background-image: url("../images/background-catalog.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 35px 70px 63px;
+  padding: 35px 70px 49px;
 }
 
 .catalog-header-title {
@@ -682,6 +687,7 @@ body {
 /*ХЛЕБНЫЕ КРОШКИ*/
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs-item {
@@ -745,13 +751,18 @@ body {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  padding-bottom: 15px;
+}
+
+.hotel-search-wrapper:first-child {
+  max-width: 450px;
 }
 
 .hotel-filter-group {
   margin: 0;
   padding: 0;
   border: 0;
-  margin-right: 70px;
+  margin-right: 72px;
 }
 
 .hotel-filter-title {
@@ -759,6 +770,7 @@ body {
   line-height: 26px;
   font-weight: 700;
   margin-bottom: 30px;
+  padding: 0;
 }
 
 .range-wrapper-inputs {
@@ -798,7 +810,6 @@ body {
 .range-input::placeholder {
   color: #ffffff;
 }
-
 
 .range-input-left {
   border-radius: 4px 0 0 4px;
@@ -854,12 +865,12 @@ body {
 
 .toggle-min {
   top: -8px;
-  left: -2px;
+  left: 0;
 }
 
 .toggle-max {
   top: -8px;
-  right: -8px;
+  right: -10px;
 }
 
 .range-toggle:focus {
@@ -900,7 +911,7 @@ body {
 
 .control-input:focus + .control-mark {
   background-color: #c9dae8;
-  box-shadow: 0 0 0 3px #83b3d3,
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
 .control-input:active .control-mark {
@@ -912,7 +923,7 @@ body {
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url('../images/icons/tick.svg');
+  background-image: url("../images/icons/tick.svg");
   background-size: 12px 10px;
   background-repeat: no-repeat;
   background-position: center;
@@ -972,7 +983,7 @@ body {
   padding-right: 20px;
   border-radius: 4px;
   appearance: none;
-  background-image: url('../images/icons/arrow.svg');
+  background-image: url("../images/icons/arrow.svg");
   background-repeat: no-repeat;
   background-position: right 13px center;
   margin: 0;
@@ -1085,7 +1096,6 @@ body {
 
 .hotel-card-image {
   display: block;
-  object-fit: contain;
 }
 
 .hotel-card-title {
@@ -1129,12 +1139,17 @@ body {
 .pagination-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
   width: 480px;
+}
+
+.pagination-item {
+  margin-bottom: 8px;
 }
 
 .pagination-item:not(:nth-child(7n)) {
@@ -1202,7 +1217,6 @@ body {
   height: 53px;
   border-radius: 50%;
   background-image: url("../images/icons/cross.svg");
-
 }
 
 .modal-button:hover {
@@ -1374,8 +1388,8 @@ body {
 /* ТУЛТИП */
 .tooltip {
   position: absolute;
-  bottom: 0;
-  left: 108px;
+  bottom: -3px;
+  left: 111px;
   width: 25px;
   height: 25px;
 }
@@ -1391,7 +1405,7 @@ body {
   height: 100%;
   width: 100%;
   cursor: help;
-  background-image: url("../images/icons/info-2.svg");
+  background-image: url("../images/icons/info.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1418,7 +1432,7 @@ body {
 }
 
 .tooltip-text::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 118px;
   bottom: 138px;
