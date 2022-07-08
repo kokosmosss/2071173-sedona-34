@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .clear-list {
@@ -564,8 +565,9 @@ img {
   background-color: #e5e5e5;
 }
 
-.text-input:invalid {
-  box-shadow: 0 0 0 2px #ff5757 inset;
+/* класс для ошибки */
+.text-input-error {
+  box-shadow: 0 0 0 3px #ff5757 inset;
 }
 
 .text-input::placeholder {
