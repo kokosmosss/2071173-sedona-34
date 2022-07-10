@@ -52,7 +52,7 @@ body {
 
 img {
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /*КНОПКИ*/
@@ -130,7 +130,7 @@ img {
 
 .navigation-button {
   width: 160px;
-  margin-left: 20px;
+  margin: 7px 0 7px 20px;
 }
 
 .submit-button {
@@ -471,6 +471,11 @@ img {
 .advantages-decoration-number {
   display: block;
   margin-bottom: 30px;
+}
+
+.img-sedona,
+.img-canyon {
+  height: 100%;
 }
 
 /*ФОРМА ПОИСКА*/
@@ -989,6 +994,7 @@ img {
   background-repeat: no-repeat;
   background-position: right 13px center;
   margin: 0;
+  background-color: #ffffff;
 }
 
 .select-control:hover {
